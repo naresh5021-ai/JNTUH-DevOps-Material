@@ -1,0 +1,54 @@
+DevOps Tools:
+	Tools 					SignUps					AWS
+to be Installed        Create Accounts		Setup before we start using it.
+
+Tools:
+VirtualBox
+Git Bash
+Vagrant
+Chocolatey/Brew
+JDK8
+Maven
+Intellij
+Sublime TextEditor
+AWS CLI
+
+SignUps:
+GitHub
+Domain Purchase (GoDaddy)
+DockerHub
+SonarCloud
+
+
+AWS:
+Free Tier Accounts
+IAM with MFA
+Billing Alarm
+Certificate Setup
+
+
+Virtualization:
+One computer does the job of multiple computers. No, I'm not talking about multitasking.
+I am talking about multi OS. One computer can run multiple OS at the same time parallelly.
+
+So instead of running multiple main Services in one computer, we can run multiple operating system in the computer and run all services on top of that So they will be isolated. And if you're thinking again, isn't it the problem of one basket having multiple eggs or multiple eggs in one basket?
+
+Then came VMware.  With the concept of virtualization. VMware brought in tools or created tools which could allow one computer to run multiple operating systems.
+
+Hypervisor: You have the hardware (physical computer), on top of that, you will have a tool called a hypervisor(the software) on that you can create virtual machines, each virtual machine having its own operating system and you can run your main service, your application in this OS. So they are isolated from each other.
+
+Terminoligies:
+Host OS
+Guest OS
+VM
+Snapshot: backup of the virtual machines.
+Hypervisor
+
+GIT (Version Control System): git is a distributed version control system, it's a tree history storage system. It's also content tracking management system.
+Well, really, in short, git provides the ease and speed.
+
+In centralized, centralized version control system, you need to set up a server, 
+but in distributed, you can just go to GitHub or BitBucket or maybe codecommit on AWS.
+You can create a git repository there, clone it and start working on it all. 
+If you don't need any more remote repository, locally also you can start versioning.
+It's very easy to handle large project with it, very easy you can get started.

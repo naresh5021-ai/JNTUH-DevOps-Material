@@ -1,0 +1,128 @@
+onsite
+offshore
+BRS
+SRS
+HLD: Architecture of S/W Products.
+LLD: describes how each and every feature in the product should work.
+FE+MW+Backend
+3 Tier Architecture
+
+Director -> Explains Development, Delivery and Service
+Project Manager -> Explains Soft Development Process
+Head Operations -> Explains how the Mobile App will be hosted on the cloud Server
+
+Req Gathering, Analysis, Planning, Designing, Construction(Development/Coding and Testing), Deployment
+
+SDLC Models:
+Waterfall,
+Iterative and Incremental,
+RAD,
+Spiral,
+Agile,
+Devops.
+
+Limitations of Waterfall:
+1. Next phase is started only after the previous phase is completed. 
+2. Can not accomodate changes.
+3. No working sw is produced until late in the lifecycle.
+
+Waterfall
+1. welcome page
+2. login
+3. dashboard
+4. gallery
+5. list of products
+6. price+discounts
+7. user notifications
+8. customer support
+9. chat
+10. cart
+11. payment gateways
+
+Client not interested in Waterfall so
+Agile Methodology
+2 to 4 weeks	2 to 4 weeks	2 to 4 weeks
+4 Tasks			4 Tasks			3 Tasks	
+
+Given Demo to the Client
+Alter/ New Requirements for the Next Iteration
+
+Operations Team started hosting the Application in the Cloud.(Stable env for the product)
+Testers are not able to access the Application and even the test cases are failing.
+Tester informed Operations team about the Failed Deployment.
+
+1. Code Changes
+2. Deploy
+3. Test/QA
+
+Inbetween the Failure and Fixes team Passed the deadline.
+
+Operations Team fedup with multiple deployements
+No clear instructions
+They need to maintaion System Uptime.
+Already Occupied.
+
+Client is waiting for the Product.
+Development Team explains the situation and convinces and asks for the extention.
+Development Team informed Operations Team that this can not be repeating
+
+Existing customers are facing the issues in accessing the application. Client is not happy.
+Director knows that unhappy customers lead to direct business loss.	
+Director understood that dev is agile but ops is still waterfall.
+
+Brings in Devops Cosultant who can fix the code delivery issue and sky rocket the business.
+Devops Engineer explains everyone that he does not have a magic wand.
+Everyone has to work collaboratively, communicate effectively, and integrate the entire code delivery process.
+He explains and train dev team on ops concepts, so they can communicate with ops team more effectively.
+He also trained ops team on Agile concepts so ops can collaborate with dev team, and the most important factor,
+automation training and instruction to every team across the board. 
+Automation of each and every task in code delivery process,like 
+code build, 
+code testing, 
+software testing, 
+infra changes, 
+deployments and everything that comes along the way.
+Wall of confusion is brought down
+
+			Development				Deploy
+			Build					Maintenance
+			Test					Monitoring
+DevOps	=	Development Team	+	Operations Team
+
+CI/CD:
+Continuous integration is an automated process in DevOps which generates software and its features quickly and efficiently.
+
+Developers write several lines of code while creating a software working in a team. It's an ideal practice to store all this code at a centralized place. This centralized repository is called a version control system like GitHub. 
+Everyday developers will pull and push code such repositories several times in a day. So code changes or code commit happens continuously. This code will be moved to build server. On build server, this code will be build, tested and evaluated, which generates the software, or we call it artifact at this stage.
+
+This artifact or software will be stored in a software repository. Artifact or software is really an archive of files generated from the build process based on the programming language. This artifact will be packaged in a specific format. Artifact packaging format could be war or jar in Java. DLL/EXE/MSI in Windows or even ZIP/Tar ball From repository It will be shipped to servers for further testing.
+
+After deploying this artifact on the servers, software testers can conduct further testing, and once they approve, it can be shipped to production servers. So that's how it works.
+
+CI: Code, Fetch, Build, Test, Notify, Feedback.
+The goal : Identify the defects at the early stages.
+
+CD: Continuous delivery is an automated process of delivering code changes to servers quickly and efficiently.
+Ops team will get regular requests to deploy the artifacts generated from the CI process on servers for further testing.
+Ops team with all the info they got deploy the artifacts to the servers, at times the deployment also fails, which leads to higher lead time.
+There is too much of human intervention and manual approval in this process.
+
+Methodologies that are used to implement Agile
+1.Extreme Programming
+2.Feature Driven Development
+3.Scrum: Framework: EPIC: Description of what client wants with less functional details, Big part of work which can be divided into small user stories.
+Ex: Development of College Website.
+Stories: Simple description of a feature. Ex: Home Page, Student Login, Faculty Login, Attendance Entry, Placements. 
+4.Kanban: Agile Methodology. Visual Project Management.
+Product Owner, Scrum Master, Developer, Tester.
+Restrospective Meeting.
+
+Disadvantages of Agile:
+Less Documentation
+Team must be knowledgeable
+The project can easily get taken off track if customer is not satisfied.
+
+AWS Cloud:
+IaaS
+PaaS
+SaaS
