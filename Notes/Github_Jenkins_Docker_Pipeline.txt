@@ -1,0 +1,84 @@
+pipeline {
+    agent any
+
+    environment {
+        IMAGE_NAME = "jnaresh5021/custom_image2"
+    }
+
+    stages {
+
+        stage('Step 1: Clone the Repo') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/naresh5021-ai/Docker_Custom_Image.git'
+            }
+        }
+
+        stage('Step 2: Docker Test') {
+            steps {
+                bat 'docker --version'
+                bat 'docker ps'
+            }
+        }
+
+        stage('Step 3: Build Docker Image') {
+            steps {
+                bat "docker build -t %IMAGE_NAME%:%BUILD_NUMBER% ."
+            }
+        }
+
+        stage('Step 4: Debug Docker') {
+            steps {
+                bat '''
+                whoami
+                docker --version
+                docker context ls
+                docker context show
+                docker info
+                '''
+            }
+        }
+
+        stage('Step 5: Login & Push to Docker Hub') {
+            steps {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'Docker_Hub_Credentials',
+                        usernameVariable: 'DOCKER_USER',
+                        passwordVariable: 'DOCKER_PASS'
+                    )
+                ]) {
+                    bat '''
+                    echo Logging into Docker Hub...
+                    echo %DOCKER_PASS% | docker login -u %DOCKER_USER% --password-stdin
+
+                    echo Pushing image...
+                    docker push %IMAGE_NAME%:%BUILD_NUMBER%
+
+                    echo Logging out...
+                    docker logout
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo '======================================='
+            echo 'Docker Image Built and Pushed Successfully!'
+            echo "Image: ${env.IMAGE_NAME}:${env.BUILD_NUMBER}"
+            echo '======================================='
+        }
+
+        failure {
+            echo '======================================='
+            echo 'Pipeline Failed!'
+            echo '======================================='
+        }
+
+        always {
+            cleanWs()
+        }
+    }
+}
